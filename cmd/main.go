@@ -39,16 +39,14 @@ func main() {
 		temp = utils.GetHashStr(utils.GetRandomString(*STR_LENGTH))
 		temp_sum = utils.GetSumOfStr(temp)
 		if temp_sum > 50 {
+			newStr := models.Str{
+				Value: temp,
+				Sum:   int32(temp_sum),
+			}
+			strs1 = utils.InsertSorted(strs1, newStr)
 
+			strs2 = append(strs2, newStr)
 		}
-		newStr := models.Str{
-			Value: temp,
-			Sum:   int32(temp_sum),
-		}
-		strs1 = utils.InsertSorted(strs1, newStr)
-
-		strs2 = append(strs2, newStr)
-
 	}
 
 	if *benchmark {
