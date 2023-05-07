@@ -1,6 +1,6 @@
 # go challenge
 
-A Go program that generates a random string, hashes it using SHA256, sums up all the numbers in the resulting hash string, and adds it to an ordered slice if the sum is greater than 50, for further usage.
+A Go program that generates random strings, hashes them using SHA256, sums up all the numbers in the resulting hash strings, and adds them to an ordered slice if the sum is greater than 50, for further usage.
 
 ---
 ## run
